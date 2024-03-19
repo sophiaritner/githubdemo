@@ -17,6 +17,13 @@ def encode(input_str):
     return(new_password)
     print('Your password has been encoded and stored!')
 
+#decode def
+def decode(input_str):
+    decoded = ""
+    for digit in str(input_str):
+        decoded += str(int(digit) - 3)
+    return decoded
+
 #menu loop
 while loop_play:
     print('Menu')
@@ -32,5 +39,6 @@ while loop_play:
         encode(encode_password)
     if choice == '2':
         decode_password = input('Please enter your password to decode: ')
+        decode(decode_password)
     if choice == '3':
         loop_play = False
