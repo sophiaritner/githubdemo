@@ -15,7 +15,6 @@ def encode(input_str):
     new_password = (new_string0 + new_string1 + new_string2 + new_string3
                     + new_string4 + new_string5 + new_string6 + new_string7)
     return(new_password)
-    print('Your password has been encoded and stored!')
 
 #decode def
 def decode(input_str):
@@ -36,9 +35,9 @@ while loop_play:
     choice = input('Please enter an option: ')
     if choice == '1':
         encode_password = input('Please enter your password to encode: ')
-        encode(encode_password)
+        password_to_decode = encode(encode_password)
+        print('Your password has been encoded and stored!')
     if choice == '2':
-        decode_password = input('Please enter your password to decode: ')
-        decode(decode_password)
+        print(f'The encoded password is', password_to_decode, 'and the original password is', decode(password_to_decode), '.')
     if choice == '3':
         loop_play = False
